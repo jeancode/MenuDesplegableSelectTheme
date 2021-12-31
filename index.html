@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Theme</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var activeMenu =  false;
+
+            $("#spand").click(function(){
+
+                if(activeMenu == false){
+
+                    $("#menu").css({
+                        width:"300px"
+                     });
+
+                     $(".ItemBoton").css({
+                        "background-position":"10px center"
+                     });
+
+                     $(".textoView").css({
+                         opacity:"1"
+                     });
+                     $(".textoTheme").css({
+                         opacity:"1"
+                     });
+                     activeMenu =  true;
+
+                }else{
+
+
+                    $("#menu").css({
+                        width:"110px"
+                    });
+                    $(".ItemBoton").css({
+                        "background-position":"30px center"
+                     });
+
+             
+                     $(".textoTheme").css({
+                         opacity:"0"
+                     });
+                     
+                     $(".textoView").css({
+                         opacity:"0"
+                     });
+                     
+                    activeMenu = false;
+
+                }
+          
+                
+            });
+        
+            $("#ligero").click(function(){
+
+                $("#contenido").css({
+                    "-webkit-filter": "invert(0)"
+                });
+            });
+            $("#oscuro").click(function(){
+                $("#contenido").css({
+                    "-webkit-filter": "invert(.8)"
+                });
+            });
+
+            $("#noche").click(function(){
+                $("#contenido").css({
+                    "-webkit-filter": "invert(1)"
+                });
+            });
+
+
+        });
+    </script>
+    <style>
+        body{
+            margin:0px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #contenido{
+
+            width: 100%;
+            height: 100%;
+            background-color:rgb(240, 240, 240);
+            position:fixed;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            -webkit-filter: invert(0);
+            -webkit-transition: all .5s ease;;
+        }
+        #menu{
+
+            width: 110px;
+            height: 300px;
+            background-color:rgb(241, 241, 241);
+            border:1px solid rgb(212, 212, 212);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.089);
+            border-radius: 10px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            padding-top:10px;
+            padding-bottom: 10px;
+            position:relative;
+            -webkit-transition: all .5s ease;;
+
+            
+        }
+        #miniItemConten{
+            width: calc(100% - 20px);
+            height: 50px;
+            background-color:white;
+            border-radius: 10px;
+            display:flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+        #ItemMnues{
+            width: calc(100% - 20px);
+            flex:1;
+            background-color:white;
+            border-radius: 10px;
+            margin-top: 20px;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+        }
+        #spand{
+           width: 25px; 
+           height: 25px;;
+           position: absolute;
+           background-color:rgb(18, 154, 233);
+           border-radius: 50%;
+           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
+           top:23px;
+           right:-20px;
+        }
+        .ItemBoton{
+            min-width:90px;
+            min-height:50px;
+            border-radius: 10px;;
+            -webkit-user-select: none;
+            
+        }
+        .ItemBoton:hover{
+            background-color:rgb(171, 199, 236);
+            -webkit-transition: all .5s ease;;
+        }
+
+      
+        
+        
+        
+
+        .iconFlecha{
+            background-image: url(https://cdn-icons.flaticon.com/png/512/2989/premium/2989988.png?token=exp=1640912533~hmac=f19ee174c5d24b6e574034ed9f16c699);
+            background-position: center center;
+            background-size: 20px;
+            background-repeat: no-repeat;
+        }
+
+        .iconLigh{
+            background-image: url(https://cdn-icons-png.flaticon.com/512/66/66275.png);
+            background-position: center center;
+            background-size: 20px;
+            background-repeat: no-repeat;
+        }
+        .iconOscuro{
+            background-image: url(https://cdn-icons-png.flaticon.com/512/702/702471.png);
+            background-position: center center;
+            background-size: 20px;
+            background-repeat: no-repeat;
+        }
+        .iconNoche{
+            background-image: url(https://cdn-icons-png.flaticon.com/512/929/929495.png);
+            background-position: center center;
+            background-size: 20px;
+            background-repeat: no-repeat;
+        }
+
+        .iconApps{
+            background-image: url( https://cdn-icons.flaticon.com/png/512/3364/premium/3364200.png?token=exp=1640912259~hmac=d3f1566dd3c428be6b61124913a2b359);
+            background-position: center center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+        }
+        .iconUser{
+            background-image: url(https://cdn-icons-png.flaticon.com/512/1077/1077114.png);
+            
+            background-position: center center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+        }
+        .iconConfig{
+            background-image: url(https://cdn-icons-png.flaticon.com/512/15/15185.png);
+            
+            background-position: center center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+        }
+
+
+        .iconBuscar{
+            background-image: url(https://cdn-icons.flaticon.com/png/512/2618/premium/2618254.png?token=exp=1640912298~hmac=5e1268e89b4ed96ea249ddbec923a32e);
+            background-position: center center;
+            background-size: 30px;
+            background-repeat: no-repeat;
+        }
+
+        .textoView{
+            width:100%;
+            height:100%;
+            display: flex;
+           justify-content:center;
+           align-items: center;
+           opacity: 0;
+        }
+        .botontheme{
+            
+            display:flex;
+            align-items: center;
+            justify-content:end;      
+            -webkit-user-select: none;  
+        }
+        .textoTheme{
+            
+            padding-right: 10px;;
+            font-size: 13px;
+            opacity: 0;;
+            margin-left: 10px;;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenido">
+
+        <div id="menu">
+
+            <div id="spand" class="iconFlecha"></div>
+
+            <div id="miniItemConten">
+
+                <div class="ItemBoton iconLigh botontheme" id="ligero">
+                    <div class="textoTheme">Ligero</div>
+                </div>
+                <div class="ItemBoton iconOscuro botontheme" id="oscuro">
+                    <div class="textoTheme">Oscuro</div>
+                </div>
+                <div class="ItemBoton iconNoche botontheme" id="noche">
+                    <div class="textoTheme">Noche</div>
+                </div>
+            </div>
+
+            <div id="ItemMnues">
+
+                <div class="ItemBoton iconApps">
+                    <div class="textoView">Aplicaciones</div>
+                </div>
+                
+                <div class="ItemBoton iconUser">
+                    <div class="textoView">Usuarios</div>
+                </div>
+                <div class="ItemBoton iconConfig">
+                    <div class="textoView">Configuracion</div>
+                </div>
+                <div class="ItemBoton iconBuscar">
+                    <div class="textoView">Buscar</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
